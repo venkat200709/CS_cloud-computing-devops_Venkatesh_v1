@@ -5,6 +5,7 @@ tests/test_service.py,Automated pytest test suite,pytest -v,v1.0.0,Yes
 Dockerfile,Multi-stage container definition,docker build -t cs-status-service:v1.0.0 .,v1.0.0,Yes
 Makefile,Automation target orchestration,make all / make test,v1.0.0,Yes
 scripts/clean_start.sh,Reproducible non-Docker runner,bash scripts/clean_start.sh,v1.0.0,Yes
+scripts/clean_start.cmd,Windows Command Prompt runner,scripts\clean_start.cmd,v1.0.0,Yes
 requirements.txt,Exact pinned dependencies,pip install -r requirements.txt,v1.0.0,Yes
 requirements.lock,Cryptographic sha256 lockfile,pip-compile --generate-hashes,v1.0.0,Yes
 sample.env,Zero-secret environment template,cp sample.env .env,v1.0.0,Yes
@@ -12,3 +13,10 @@ docs/architecture.md,System design and readiness contract,Open in markdown viewe
 docs/startup-guide.md,Zero-assumption operator setup,Open in markdown viewer,v1.0.0,Yes
 docs/runbook.md,Rollback procedure and triage runbook,Open in markdown viewer,v1.0.0,Yes
 evidence/clean-start-evidence.md,Live captured execution evidence,Open in markdown viewer,v1.0.0,Yes
+evidence-log.csv,Evidence checklist and audit log,Open in spreadsheet viewer,v1.0.0,Yes
+worksheet-01.csv,Checkpoint 01: Endpoints & configuration,Open in spreadsheet viewer,v1.0.0,Yes
+worksheet-02.csv,Checkpoint 02: Repeatable builds & storage,Open in spreadsheet viewer,v1.0.0,Yes
+worksheet-03.csv,Checkpoint 03: Automated quality gates,Open in spreadsheet viewer,v1.0.0,Yes
+worksheet-04.csv,Checkpoint 04: Failure observation & triage,Open in spreadsheet viewer,v1.0.0,Yes
+worksheet-05.csv,Checkpoint 05: Hardening & rollback limits,Open in spreadsheet viewer,v1.0.0,Yes
+worksheet-06.csv,Checkpoint 06: Operable handover instructions,Open in spreadsheet viewer,v1.0.0,Yes
