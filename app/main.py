@@ -22,7 +22,7 @@ def get_env_config():
     port = validate_port(raw_port)
     host = os.getenv("HOST", "127.0.0.1")
     dep_path = os.getenv("DEPENDENCY_PATH") or os.getenv("DEPENDENCY_FILE", "data/dependency.ok")
-    version = os.getenv("APP_VERSION", "v1.0.0")
+    version = os.getenv("APP_VERSION", "v1.0.1")
     log_level = os.getenv("LOG_LEVEL", "INFO").upper()
     return {
         "PORT": port,
