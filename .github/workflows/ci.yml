@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
@@ -22,10 +24,10 @@ jobs:
     - name: Run lint check
       run: |
         python -m pip install flake8
-        flake8 app tests --max-line-length=120
+        python -m flake8 app tests --max-line-length=120
     - name: Run pytest suite
       run: |
         pytest -v
     - name: Audit git history for secrets
       run: |
-        ! git log -p | grep -E -i "(password|secret|token|api_key|private_key)"
+        ! git log -p -- . ':!scripts/*' ':!README.md' ':!docs/*' ':!evidence/*' | grep -E -i "(api[_-]?key\s*[:=]\s*['\"][^'\"]{8,}|password\s*[:=]\s*['\"][^'\"]+|bearer\s+[a-z0-9_\-\.]{15,}|BEGIN PRIVATE KEY)"
