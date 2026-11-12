@@ -30,4 +30,7 @@ jobs:
         pytest -v
     - name: Audit git history for secrets
       run: |
-        ! git log -p -- . ':!scripts/*' ':!README.md' ':!docs/*' ':!evidence/*' | grep -E -i "(api[_-]?key\s*[:=]\s*['\"][^'\"]{8,}|password\s*[:=]\s*['\"][^'\"]+|bearer\s+[a-z0-9_\-\.]{15,}|BEGIN PRIVATE KEY)"
+        MATCHES=$(git log -p -- . ':!scripts/*' ':!README.md' ':!docs/*' ':!evidence/*' | grep -E -i "(api[_-]?key\s*[:=]\s*['\"][^'\"]{8,}|password\s*[:=]\s*['\"][^'\"]+|bearer\s+[a-z0-9_\-\.]{15,}|BEGIN PRIVATE KEY)" || true)
+        if [ -n "$MATCHES" ]; then
+          exit 1
+        fi
