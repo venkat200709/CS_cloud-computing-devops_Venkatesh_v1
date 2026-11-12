@@ -62,7 +62,7 @@ echo "=== RUNNING PYTEST SUITE ==="
 pytest -v
 
 echo "=== RUNNING GIT HISTORY SECRET AUDIT ==="
-SCAN_MATCHES=$(git log -p | grep -E -i "(api[_-]?key\s*[:=]\s*['\"][^'\"]{8,}|password\s*[:=]\s*['\"][^'\"]+|bearer\s+[a-z0-9_\-\.]{15,}|BEGIN PRIVATE KEY)" || true)
+SCAN_MATCHES=$(git log -p -- . ':!scripts/clean_start.sh' | grep -E -i "(api[_-]?key\s*[:=]\s*['\"][^'\"]{8,}|password\s*[:=]\s*['\"][^'\"]+|bearer\s+[a-z0-9_\-\.]{15,}|BEGIN PRIVATE KEY)" || true)
 if [ -n "$SCAN_MATCHES" ]; then
   echo "AUDIT FAILED: Secrets detected in git history!"
   exit 1
