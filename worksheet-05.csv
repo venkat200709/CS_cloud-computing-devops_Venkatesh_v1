@@ -1,0 +1,2 @@
+﻿Version,Rollback step,Config change,State risk,Verification
+v1.0.1 to v1.0.0,git checkout v1.0.0,APP_VERSION reverts to v1.0.0,External dependency state unchanged by code checkout,curl /health returns version v1.0.0 and pytest passes

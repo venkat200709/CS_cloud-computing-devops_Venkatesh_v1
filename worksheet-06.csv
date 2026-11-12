@@ -1,0 +1,6 @@
+﻿Operator task,Command,Expected signal,Failure response
+Start Service,python -m app.main,Process listening on configured host and port,Verify PORT free and Python environment active
+Inspect Logs,cat /dev/stdout (or terminal console),JSON formatted readiness probe records,Verify LOG_LEVEL set to INFO or DEBUG
+Simulate Outage,rm -f data/dependency.ok,/ready responds 503 /health stays 200,Inspect file permissions and path variable
+Recover Outage,touch data/dependency.ok,/ready immediately recovers to 200,Confirm file is regular file and readable
+Stop Service,kill $APP_PID,Process terminates cleanly,Use kill -9 if ungraceful shutdown occurs

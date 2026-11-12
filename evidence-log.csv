@@ -1,0 +1,10 @@
+﻿Requirement or test ID,Given or starting state,Action,Expected result,Actual result,Evidence file,Pass fail or not run,Next action
+REQ-01-LIVENESS,Process running on port 8080,curl -i http://127.0.0.1:8080/health,200 OK status: ok version: v1.0.0,200 OK status: ok version: v1.0.0,evidence/clean-start-evidence.md,PASS,Proceed to readiness check
+REQ-02-READINESS-OK,Dependency file present,curl -i http://127.0.0.1:8080/ready,200 OK ready: true dependency: ok,200 OK ready: true dependency: ok,evidence/clean-start-evidence.md,PASS,Proceed to outage test
+REQ-03-READINESS-FAIL,Dependency file removed,curl -i http://127.0.0.1:8080/ready,503 Service Unavailable ready: false,503 Service Unavailable ready: false,evidence/clean-start-evidence.md,PASS,Check liveness decoupling
+REQ-04-DECOUPLING,Dependency file removed,curl -i http://127.0.0.1:8080/health,200 OK status: ok (process alive),200 OK status: ok (process alive),evidence/clean-start-evidence.md,PASS,Restore dependency
+REQ-05-READINESS-RECOVERY,Dependency file restored,curl -i http://127.0.0.1:8080/ready,200 OK ready: true dependency: ok,200 OK ready: true dependency: ok,evidence/clean-start-evidence.md,PASS,Check dashboard UI
+REQ-06-OPERATOR-UI,Service running,curl -i http://127.0.0.1:8080/,200 OK HTML status dashboard,200 OK HTML status dashboard,evidence/clean-start-evidence.md,PASS,Validate port parser
+REQ-07-PORT-VALIDATION,Non-integer port,validate_port('bad'),ValueError raised on startup,ValueError raised on startup,evidence/clean-start-evidence.md,PASS,Run secret scan
+REQ-08-SECRET-SCAN,Git commit history,git log -p | grep secret,Zero secret matches detected,Zero secret matches detected,evidence/clean-start-evidence.md,PASS,Run rollback test
+REQ-09-ROLLBACK-VERIFY,Release v1.0.1 deployed,git checkout v1.0.0,Clean checkout of v1.0.0 and test pass,Clean checkout of v1.0.0 and test pass,evidence/clean-start-evidence.md,PASS,Complete handover

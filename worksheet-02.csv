@@ -1,0 +1,5 @@
+﻿Build step,Pinned input,Command,Expected output,Persistent state
+Lock dependencies,requirements.in,pip-compile --generate-hashes requirements.in -o requirements.lock,Locked requirements with sha256 hashes,None
+Install packages,requirements.txt,pip install -r requirements.txt,Deterministic package installation,Virtualenv site-packages
+Container build,Dockerfile,docker build --no-cache -t cs-status-service:v1.0.0 .,Multi-stage non-root container image,Local container registry
+Script clean start,scripts/clean_start.sh,bash scripts/clean_start.sh,Full automated probe cycle passing,data/dependency.ok file

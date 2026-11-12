@@ -1,0 +1,4 @@
+﻿Endpoint,Purpose,Success signal,Failure signal,Configuration
+/health,Process liveness check,200 {"status":"ok"},Process dead / connection refused,APP_VERSION PORT HOST
+/ready,Dependency readiness check,200 {"ready":true "dependency":"ok"},503 {"ready":false "dependency":"unreachable"},DEPENDENCY_PATH
+/,Human-readable status dashboard,200 HTML with READY badge,503 HTML with DEGRADED badge,PORT HOST DEPENDENCY_PATH

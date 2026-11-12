@@ -1,0 +1,14 @@
+﻿File or URL,Purpose,Open or run steps,Version,Access checked
+README.md,Cover page and quick start,Open in markdown viewer,v1.0.0,Yes
+app/main.py,Core service endpoints and logic,python -m app.main,v1.0.0,Yes
+tests/test_service.py,Automated pytest test suite,pytest -v,v1.0.0,Yes
+Dockerfile,Multi-stage container definition,docker build -t cs-status-service:v1.0.0 .,v1.0.0,Yes
+Makefile,Automation target orchestration,make all / make test,v1.0.0,Yes
+scripts/clean_start.sh,Reproducible non-Docker runner,bash scripts/clean_start.sh,v1.0.0,Yes
+requirements.txt,Exact pinned dependencies,pip install -r requirements.txt,v1.0.0,Yes
+requirements.lock,Cryptographic sha256 lockfile,pip-compile --generate-hashes,v1.0.0,Yes
+sample.env,Zero-secret environment template,cp sample.env .env,v1.0.0,Yes
+docs/architecture.md,System design and readiness contract,Open in markdown viewer,v1.0.0,Yes
+docs/startup-guide.md,Zero-assumption operator setup,Open in markdown viewer,v1.0.0,Yes
+docs/runbook.md,Rollback procedure and triage runbook,Open in markdown viewer,v1.0.0,Yes
+evidence/clean-start-evidence.md,Live captured execution evidence,Open in markdown viewer,v1.0.0,Yes

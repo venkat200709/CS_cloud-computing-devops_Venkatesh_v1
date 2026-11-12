@@ -1,0 +1,4 @@
+﻿Time,Failure injected,Signal,Diagnosis,Action,Recovery check
+00:01:00,rm -f data/dependency.ok,503 {"ready":false "dependency":"unreachable"},Simulated storage dependency removed,Restore dependency file,200 {"ready":true "dependency":"ok"}
+00:03:00,PORT=invalid,Startup failure ValueError: Invalid PORT,Invalid environment configuration,Correct PORT variable in env,Process boots cleanly on port 8080
+00:05:00,mkdir data/dependency.ok,503 {"ready":false "dependency":"unreachable"},Dependency path is directory not regular file,Remove directory and touch regular file,200 {"ready":true "dependency":"ok"}
