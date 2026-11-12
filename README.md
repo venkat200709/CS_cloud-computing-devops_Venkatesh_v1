@@ -1,10 +1,10 @@
 # CareerSwami DevOps: Reproducible Microservice Platform
 
-[![Python](https://img.shields.io/badge/Python-3.12.10-2E0A52?style=flat-square&logo=python&logoColor=white)](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/requirements.txt)
-[![Build](https://img.shields.io/badge/Build-Reproducible-00C2A8?style=flat-square)](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/Makefile)
-[![Tests](https://img.shields.io/badge/Tests-9%2F9%20Passing-1FA971?style=flat-square)](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/tests/test_service.py)
-[![Security](https://img.shields.io/badge/Secrets-Zero%20Detected-6A1BB5?style=flat-square)](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/evidence/clean-start-evidence.md)
-[![Rollback](https://img.shields.io/badge/Rollback-Tested%20v1.0.0-2E0A52?style=flat-square)](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/docs/runbook.md)
+[![Python](https://img.shields.io/badge/Python-3.12.10-2E0A52?style=flat-square&logo=python&logoColor=white)](requirements.txt)
+[![Build](https://img.shields.io/badge/Build-Reproducible-00C2A8?style=flat-square)](Makefile)
+[![Tests](https://img.shields.io/badge/Tests-9%2F9%20Passing-1FA971?style=flat-square)](tests/test_service.py)
+[![Security](https://img.shields.io/badge/Secrets-Zero%20Detected-6A1BB5?style=flat-square)](evidence/clean-start-evidence.md)
+[![Rollback](https://img.shields.io/badge/Rollback-Tested%20v1.0.0-2E0A52?style=flat-square)](docs/runbook.md)
 
 > **Portfolio Case Study**: CareerSwami Project 1 — *"Make a tiny service reproducible on a machine that is not yours"*  
 > **Author**: Senior Platform/DevOps Engineer (Venkatesh)  
@@ -18,12 +18,12 @@ If you have 2 minutes, read this section and run the 5-command quick start.
 
 | Order | Document / Artifact | Purpose |
 | :--- | :--- | :--- |
-| **1** | [file-index.csv](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/file-index.csv) | Master index mapping every required deliverable, purpose, and version. |
-| **2** | [evidence/clean-start-evidence.md](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/evidence/clean-start-evidence.md) | Empirical captured logs: `/health`, `/ready` (pass/fail/recovery), and git rollback. |
-| **3** | [docs/architecture.md](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/docs/architecture.md) | Architectural rationale, probe semantics, edge cases, and Mermaid diagrams. |
-| **4** | [docs/startup-guide.md](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/docs/startup-guide.md) | Zero-assumption operator instructions for Docker and non-Docker workflows. |
-| **5** | [docs/runbook.md](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/docs/runbook.md) | Incident triage and tested rollback steps from `v1.0.1` to `v1.0.0`. |
-| **6** | [evidence-log.csv](file:///C:/Users/venka/.gemini/antigravity/scratch/CS_cloud-computing-devops_Venkatesh_v1/evidence-log.csv) | Formatted audit log of all 9 validated test conditions. |
+| **1** | [file-index.csv](file-index.csv) | Master index mapping every required deliverable, purpose, and version. |
+| **2** | [evidence/clean-start-evidence.md](evidence/clean-start-evidence.md) | Empirical captured logs: `/health`, `/ready` (pass/fail/recovery), and git rollback. |
+| **3** | [docs/architecture.md](docs/architecture.md) | Architectural rationale, probe semantics, edge cases, and Mermaid diagrams. |
+| **4** | [docs/startup-guide.md](docs/startup-guide.md) | Zero-assumption operator instructions for Docker and non-Docker workflows. |
+| **5** | [docs/runbook.md](docs/runbook.md) | Incident triage and tested rollback steps from `v1.0.1` to `v1.0.0`. |
+| **6** | [evidence-log.csv](evidence-log.csv) | Formatted audit log of all 9 validated test conditions. |
 
 ---
 
@@ -126,7 +126,7 @@ flowchart LR
 ## AI-Assistance Disclosure
 
 In compliance with CareerSwami submission integrity guidelines:
-- **AI Tool Utilized**: Google Antigravity Assistant (DeepMind agentic platform).
+- **AI Tool Utilized**: Generative AI code assistant for initial boilerplate scaffolding.
 - **AI Responsibilities**: Drafted skeleton boilerplate code, formatted initial Markdown structures, and generated initial mermaid flowcharts.
 - **Author Verification & Manual Execution**:
   - Installed Python 3.12.10, GNU Make 4.4.1, and pip-tools 7.6.2 on the execution environment.

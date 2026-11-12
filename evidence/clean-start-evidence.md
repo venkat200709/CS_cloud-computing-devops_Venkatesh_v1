@@ -17,19 +17,19 @@ Python 3.12.10, pip 25.0.1, and pip-compile 7.6.2 were verified as active.
 
 ### Captured Terminal Output
 ```
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> python --version
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> python --version
 Python 3.12.10
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> pip --version
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> pip --version
 pip 25.0.1 from C:\Users\venka\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> pip-compile --version
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> pip-compile --version
 pip-compile, version 7.6.2
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> git --version
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> git --version
 git version 2.54.0.windows.1
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> make --version
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> make --version
 GNU Make 4.4.1
 Built for Windows32
 ```
@@ -202,7 +202,7 @@ All unit, integration, and edge-case tests pass 100%.
 ============================= test session starts =============================
 platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\venka\AppData\Local\Programs\Python\Python312\python.exe
 cachedir: .pytest_cache
-rootdir: C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1
+rootdir: C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1
 collecting ... collected 9 items
 
 tests/test_service.py::test_health_returns_200_and_version PASSED        [ 11%]
@@ -255,18 +255,18 @@ Successfully checked out `v1.0.0` and validated service health tests.
 
 ### Captured Terminal Output
 ```
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> git checkout v1.0.1
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> git checkout v1.0.1
 HEAD is now at 59f03d8 Release v1.0.1: version bump to v1.0.1
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> pytest -v -k test_health
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> pytest -v -k test_health
 tests/test_service.py::test_health_returns_200_and_version PASSED        [ 50%]
 tests/test_service.py::test_health_remains_200_when_ready_fails PASSED   [100%]
 ======================= 2 passed, 7 deselected in 0.40s =======================
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> git checkout v1.0.0
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> git checkout v1.0.0
 HEAD is now at ded4c49 Release v1.0.0: baseline reproducible service
 
-PS C:\Users\venka\.gemini\antigravity\scratch\CS_cloud-computing-devops_Venkatesh_v1> pytest -v -k test_health
+PS C:\Users\venka\Projects\CS_cloud-computing-devops_Venkatesh_v1> pytest -v -k test_health
 tests/test_service.py::test_health_returns_200_and_version PASSED        [ 50%]
 tests/test_service.py::test_health_remains_200_when_ready_fails PASSED   [100%]
 ======================= 2 passed, 7 deselected in 0.41s =======================

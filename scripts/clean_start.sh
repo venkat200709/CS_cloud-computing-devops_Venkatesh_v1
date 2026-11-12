@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-export PATH="/usr/bin:/mingw64/bin:/c/Users/venka/.gemini/antigravity/bin:$PATH"
+export PATH="/usr/bin:/mingw64/bin:/c/Program Files/Git/bin:/c/Program Files/Git/usr/bin:$PATH"
 
 PORT="${PORT:-8080}"
 HOST="${HOST:-127.0.0.1}"
